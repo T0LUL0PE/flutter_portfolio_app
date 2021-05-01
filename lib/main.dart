@@ -53,11 +53,26 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontSize: 24
                   )
               ),
-              Text('Lagos, Nigeria',
-                  style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 16
+              Row(
+                children: [
+                  Image(
+                    image: AssetImage('images/location.png'),
+                    height: 20,
+                    width: 20,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 5),
+                    child: Text('Lagos, Nigeria',
+                        style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 16,
+                        )
+                    ),
                   )
+
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
               ),
               Row(
                 children: [
