@@ -45,12 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               CircleAvatar(
                   radius: 60,
-                  backgroundImage: AssetImage('images/getty.jpg')
+                  backgroundImage: AssetImage('images/getty.png'),
               ),
               Text('Tolulope Adams',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 24
+                      fontSize: 22
                   )
               ),
               Row(
