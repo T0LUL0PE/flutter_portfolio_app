@@ -28,159 +28,200 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
-        ),
-        body: Center(
-          child: Container(
-            width: 320,
-            height: 560,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                CircleAvatar(
-                    radius: 60,
-                    backgroundImage: AssetImage('images/getty.jpg')
-                ),
-                Text('Tolulope Adams',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24
-                    )
-                ),
-                Text('Lagos, Nigeria',
-                    style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 16
-                    )
-                ),
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: 80,
-                      height: 36,
-                      child : OutlinedButton(
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Container(
+          width: 320,
+          height: 590,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                  radius: 60,
+                  backgroundImage: AssetImage('images/getty.jpg')
+              ),
+              Text('Tolulope Adams',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24
+                  )
+              ),
+              Text('Lagos, Nigeria',
+                  style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 16
+                  )
+              ),
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: 80,
+                    height: 40,
+                    child : ElevatedButton(
                         onPressed: null,
-                        child: Text('About'),
-                        style: ButtonStyle(
-                            side: MaterialStateProperty.all<BorderSide>(
-                                BorderSide(
-                                    color: Theme.of(context).accentColor,
-                                    width: 1.5
-                                )
-                            )
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: 80,
-                      height: 36,
-                      child : OutlinedButton(
-                        onPressed: null,
-                        child: Text('About'),
-                        style: ButtonStyle(
-                            side: MaterialStateProperty.all<BorderSide>(
-                                BorderSide(
-                                    color: Theme.of(context).accentColor,
-                                    width: 1.5
-                                )
-                            )
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: 80,
-                      height: 36,
-                      child : OutlinedButton(
-                        onPressed: null,
-                        child: Text('About'),
-                        style: ButtonStyle(
-                            side: MaterialStateProperty.all<BorderSide>(
-                                BorderSide(
-                                    color: Theme.of(context).accentColor,
-                                    width: 1.5
-                                )
-                            )
-                        ),
-                      ),
-                    )
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                ),
-                Card(
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: null,
-                    child: Container(
-                      width: 280,
-                      height: 200,
-                      padding: EdgeInsets.all(10),
-                      child: Text('About',
+                        child: Text('About',
                           style: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 18,
-                              decoration: TextDecoration.underline
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+                          ),
+                        ),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                        )
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: 80,
+                    height: 36,
+                    child : OutlinedButton(
+                      onPressed: null,
+                      child: Text('Profile',
+                        style: TextStyle(
+                            color: Colors.black87
+                        ),
+                      ),
+                      style: ButtonStyle(
+                          side: MaterialStateProperty.all<BorderSide>(
+                              BorderSide(
+                                  color: Theme.of(context).primaryColor,
+                                  width: 1.5
+                              )
                           )
                       ),
                     ),
                   ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    width: 80,
+                    height: 36,
+                    child : OutlinedButton(
+                      onPressed: null,
+                      child: Text('Skills',
+                        style: TextStyle(
+                            color: Colors.black87
+                        ),
+                      ),
+                      style: ButtonStyle(
+                          side: MaterialStateProperty.all<BorderSide>(
+                              BorderSide(
+                                  color: Theme.of(context).primaryColor,
+                                  width: 1.5
+                              )
+                          )
+                      ),
+                    ),
+                  )
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: null,
+                  child: Container(
+                      width: 280,
+                      height: 220,
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(left: 5),
+                            child: Text('About:',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18
+                                )
+                            ),
+                            alignment: Alignment.topLeft,
+                          ),
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            child: Text("Tolulope Adams is goal-driven, tech-savvy individual who has passion for solving problems through code."
+                                "He is someone that is always enthusiastic about learning new things and he has a preference for practical/hands-on "
+                                "experience rather than learning theoretically without being able to put knowledge gained to solve real-life problems",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                )
+                            ),
+                          ),
+                        ],
+                      )
+                  ),
                 ),
-                Text('Socials (Long Press to see username)',
+                elevation: 4,
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10),
+                child: Text("Socials",
                     style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        fontSize: 16
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     )
                 ),
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      child : FloatingActionButton(
-                        tooltip: '@thec0dc8ter',
+              ),
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child : FloatingActionButton(
+                      child: Image(
+                        image: AssetImage('images/instagram.png'),
                       ),
+                      tooltip: '@thec0dc8ter',
+                      backgroundColor: Colors.white,
+                      elevation: 0,
                     ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      child : FloatingActionButton(
-                        tooltip: '@thec0dc8ter',
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child : FloatingActionButton(
+                      child: Image(
+                        image: AssetImage('images/github.png'),
                       ),
+                      tooltip: '@thec0dc8ter',
+                      backgroundColor: Colors.white,
+                      elevation: 0,
                     ),
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      child : FloatingActionButton(
-                        tooltip: '@thec0dc8ter',
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child : FloatingActionButton(
+                      child: Image(
+                        image: AssetImage('images/twitter.png'),
                       ),
-                    )
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                )
-              ],
-            ),
+                      tooltip: '@thec0dc8ter',
+                      backgroundColor: Colors.white,
+                      elevation: 0,
+                    ),
+                  )
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              Text('long press to see username',
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: Colors.blue
+                ),
+              )
+            ],
+          ),
+          decoration: BoxDecoration(
             color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(5))
           ),
         ),
-      backgroundColor: Colors.red,// This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      backgroundColor: Theme.of(context).primaryColor,
     );
   }
 }
